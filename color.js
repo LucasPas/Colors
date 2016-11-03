@@ -1,4 +1,4 @@
-//Declare the Color Object with our new keyword below here.
+0//Declare the Color Object with our new keyword below here.
 const Color = new Object();
 
 /*
@@ -46,6 +46,18 @@ Color.blueIntensity = function(rgb){
 };
 
 //brightness
-
+Color.brightness = function(rgb){
+  var bright = (Color.greenIntensity + Color.blueIntensity + Color.redIntensity)/3
+  return bright
+}
 
 //complement
+color.complement = function(rgb){
+  var comp= [];
+  comp[0]= 255-rgb[0];
+  comp[1]= 255-rgb[1];
+  comp[2]= 255-rgb[2];
+  return comp;
+}
+
+console.log(Color.complement([200,5,31]));
