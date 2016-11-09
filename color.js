@@ -47,7 +47,7 @@ Color.blueIntensity = function(rgb){
 
 //brightness
 Color.brightness = function(rgb){
-  var bright = (Color.greenIntensity + Color.blueIntensity + Color.redIntensity)/3
+  var bright = (Color.greenIntensity(rgb) + Color.blueIntensity(rgb) + Color.redIntensity(rgb))/3
   return bright
 }
 
